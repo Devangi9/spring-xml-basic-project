@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context/ 
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <!-- <bean id="computer" class="com.sampleproject.springxmlbasicproject.Laptop">
+  
+  <constructor-arg name="ramSize" value="8GB"></constructor-arg>
+  <constructor-arg name="processor" value="Intel i5"></constructor-arg>
+  
+  </bean> -->
+   
+  <bean id="computer" class="com.sampleproject.springxmlbasicproject.Desktop" >
+  <constructor-arg name="ramSize" value="16GB"></constructor-arg>
+  <property name="processor" ref="processor"></property>
+
+  
+  </bean> 
+  
+  <bean id ="processor" class="com.sampleproject.springxmlbasicproject.Processor" >
+  <property name="noOfCOre" value="8"></property>
+  <constructor-arg name="name" value="Ryzen"></constructor-arg>
+  </bean>
+  
+  
+  
+ </beans>
